@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="../../../../Bootstrap 5/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="style/style.css" />
+    <link rel="stylesheet" href="style/range-input.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@700&display=swap");
+    </style>
+
+    <title>Frontend Mentor | Password generator app</title>
+  </head>
+  <body>
+    <body class="">
+      <h1>Password Generator</h1>
+      <div class="inputbox">
+        <input type="text" id="textInput" placeholder="P4$5W0rD!" disabled />
+        <div class="copy">
+          <p id="message">Copied!</p>
+          <span id="copyButton" alt="copy to clipboard"></span>
+        </div>
+      </div>
+      <div class="cardbox">
+        <div class="filterbox">
+          <div class="slider">
+            <div class="inputnumber">
+              <p>Character Length</p>
+              <p id="output">0</p>
+            </div>
+            <input
+              type="range"
+              id="slider"
+              name="chrlength"
+              min="0"
+              max="20"
+              value="0"
+              class="styled-slider slider-progress" />
+          </div>
+          <section class="filters">
+            <label for="uppercase" class="filter-option"
+              >Include Uppercase Letters
+              <input
+                type="checkbox"
+                id="uppercase"
+                name="uppercase"
+                unchecked />
+              <span class="checkmark"></span>
+            </label>
+            <label for="lowercase" class="filter-option"
+              >Include Lowercase Letters
+              <input
+                type="checkbox"
+                id="lowercase"
+                name="lowercase"
+                unchecked />
+              <span class="checkmark"></span>
+            </label>
+            <label for="numbers" class="filter-option"
+              >Include Numbers
+              <input type="checkbox" id="numbers" name="numbers" unchecked />
+              <span class="checkmark"></span>
+            </label>
+            <label for="symbols" class="filter-option"
+              >Include Symbols
+              <input type="checkbox" id="symbols" name="symbols" unchecked />
+              <span class="checkmark"></span>
+            </label>
+          </section>
+          <div class="strength">
+            <p class="str">STRENGTH</p>
+            <div class="strtext">
+              <p id="strength"></p>
+              <span id="bar1"></span>
+              <span id="bar2"></span>
+              <span id="bar3"></span>
+              <span id="bar4"></span>
+            </div>
+          </div>
+          <button id="generate" class="generate123">
+            GENERATE
+            <span class="icon-right"></span>
+          </button>
+        </div>
+      </div>
+    </body>
+    <footer class="text-center py-3 mt-5 pt-5">
+      <div>
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Maksim Stankovic</a>.
+      </div>
+    </footer>
+    <script src="script/range-input.js"></script>
+    <script src="script/app.js"></script>
+    <script src="script/zxcvbn.js"></script>
+  </body>
+</html>
