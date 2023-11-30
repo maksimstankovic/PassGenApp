@@ -61,6 +61,10 @@ generateButton.addEventListener("click", () => {
   if (document.getElementById("symbols").checked) {
     selectedChars += specialChars;
   }
+  if (selectedChars === "") {
+    alert("Please select at least one character set.");
+    return;
+  }
 
   let generatedString = "";
   for (let i = 0; i < desiredLength; i++) {
